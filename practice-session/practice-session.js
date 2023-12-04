@@ -29,4 +29,22 @@ Hint 2 - Use variables to save yourself some repetitive typing.
 
 
 
-//Exercise 2
+
+function showFeedback(isCorrect) {
+    const feedbackDiv = document.getElementById('feedback');
+    feedbackDiv.innerHTML = isCorrect ? 'Correct! <img src="thumbs-up.png" class="feedback-image">' : 'Incorrect! <img src="thumbs-down.png" class="feedback-image">';
+}
+
+
+function handleTrue() {
+    showFeedback(true);
+}
+
+
+function handleFalse() {
+    showFeedback(false);
+}
+
+
+document.getElementById('trueBtn').addEventListener('click', handleTrue);
+document.getElementById('falseBtn').addEventListener('click', handleFalse);

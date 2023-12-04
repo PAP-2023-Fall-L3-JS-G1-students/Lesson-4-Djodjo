@@ -62,3 +62,101 @@ Change the flag image to the alien ship
 2. In main.js, add a parameter called icon to the factOne() function
 3. Inside the function, run the src property on the parameter icon and set its value to "pin-blue.png" 
 */
+function greet(greeting) {
+
+    console.log(greeting);
+}
+
+
+greet("Welcome to the Interactive Moon Facts project!");
+const factOneTag = document.getElementById('moon-fact-1');
+
+
+function factOne() {
+
+    factOneTag.textContent = "The moon is Earth's only natural satellite.";
+}
+
+factOne();
+<img class="pin" src="pin-red.png" onclick="factOne();"></img>
+const factTwoTag = document.getElementById('moon-fact-2');
+
+
+function factTwo() {
+  
+    factTwoTag.textContent = "The moon is about 1/6th the size of Earth.";
+}
+
+
+factTwo();
+const factTwoIcon = document.querySelector('#fact-2-icon');
+
+function factTwo() {
+
+    factTwoTag.textContent = "The moon is about 1/6th the size of Earth.";
+
+    this.src = "pin-blue.png";
+}
+
+factTwoIcon.addEventListener('click', factTwo);
+const factThreeTag = document.querySelector('#moon-fact-3');
+const factFourTag = document.querySelector('#moon-fact-4');
+const factFiveTag = document.querySelector('#moon-fact-5');
+
+
+const factThreeIcon = document.querySelector('#fact-3-icon');
+const factFourIcon = document.querySelector('#fact-4-icon');
+const factFiveIcon = document.querySelector('#fact-5-icon');
+
+
+function factThree() {
+  
+    factThreeTag.textContent = "The moon has a thin exosphere composed mostly of hydrogen, helium, neon.";
+
+    this.src = "pin-blue.png";
+}
+
+
+function factFour() {
+    
+    factFourTag.textContent = "The moon takes about 27.3 days to rotate on its axis and complete one orbit around Earth.";
+
+  
+    factFourIcon.src = "pin-blue.png";
+}
+
+
+function factFive() {
+   
+    factFiveTag.textContent = "The moon's gravity is about 1/6th of Earth's gravity.";
+
+    
+    this.src = "pin-blue.png";
+}
+
+
+factThreeIcon.addEventListener('click', factThree);
+factFourIcon.addEventListener('click', factFour);
+factFiveIcon.addEventListener('click', factFive);
+const factSixTag = document.querySelector('#moon-fact-6');
+
+
+const alienShipIcon = document.querySelector('#alien-ship-icon');
+
+
+function secret() {
+
+    factSixTag.textContent = "Did you know? There's a secret alien base on the moon! 👽";
+
+
+    alienShipIcon.src = "alien-ship.png";
+}
+
+
+alienShipIcon.addEventListener('click', secret);
+function factOne(icon) {
+   
+    factOneTag.textContent = "The moon is Earth's only natural satellite.";
+
+    icon.src = "pin-blue.png";
+}
